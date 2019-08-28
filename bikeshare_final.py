@@ -117,12 +117,6 @@ def station_stats(df):
     # Note the statement does not work: print("\nList of popular routes:", df1.groupby(['Start Station','End Station']).count().head(5))
     #another thing change label and add
 
-    # Some reference
-        # https://stackoverflow.com/questions/33346591/what-is-the-difference-between-size-and-count-in-pandas
-        # the above link suggests how to use groupby
-            # https://stackoverflow.com/questions/11285613/selecting-multiple-columns-in-a-pandas-dataframe
-            # above link for reframing the dataframe with the 2 columns
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print()
     print('-'*40)
@@ -183,8 +177,6 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-        # https://stackoverflow.com/questions/16043797/python-passing-variables-between-functions
-        # the above link clarifies arguments within a function returne to another function very very clearly
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':

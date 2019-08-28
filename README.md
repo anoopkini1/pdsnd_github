@@ -8,8 +8,8 @@ On 28-August-2019 by Anoop Kini
 Provides descriptive statistics from the dataset based on user defined filters. 
 
 ### Code Description
-The code bears an extension .py and can be run in python.
-Alternatively can be run using a Jupyter notebook
+The code-file bears an extension .py and can be run in python.
+Alternatively the code can be run using a Jupyter notebook
 
 ### Input files used
 chicago.csv, new_york_city.csv, washington.csv

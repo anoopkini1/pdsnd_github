@@ -154,7 +154,6 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df,city):
-    # A informal pointer for myself: interesting concept of local and global variable
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
@@ -169,14 +168,14 @@ def user_stats(df,city):
         gender_type_counts = df['Gender'].value_counts()
         print(gender_type_counts)
 
-    # Display earliest, most recent, and most common year of birth
-    common_year_birth = int(df['Birth Year'].mode()[0])
-    recent_year_birth = int(df['Birth Year'].max())
-    earliest_year_birth = int(df['Birth Year'].min())
+        # Display earliest, most recent, and most common year of birth
+        common_year_birth = int(df['Birth Year'].mode()[0])
+        recent_year_birth = int(df['Birth Year'].max())
+        earliest_year_birth = int(df['Birth Year'].min())
 
-    print("\nMost common year of birth is:",common_year_birth)
-    print("\nMost recent year of birth is:",recent_year_birth)
-    print("\nEarliest year of birth is:",earliest_year_birth)
+        print("\nMost common year of birth is:",common_year_birth)
+        print("\nMost recent year of birth is:",recent_year_birth)
+        print("\nEarliest year of birth is:",earliest_year_birth)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)

@@ -1,5 +1,5 @@
 ### Date created
-On 28-August-2019
+On 28-August-2019 by Anoop Kini
 
 ### Project Title
 "Big Data" Bikeshare Project
@@ -11,7 +11,9 @@ Provides descriptive statistics from the dataset based on user defined filters
 chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
-The reference for the datasets were from udacity "Programming for Data Science course"
+* The reference for the datasets were from udacity "Programming for Data Science course"
+* The basic code template was taken from the same source
+
 ### References
 * https://stackoverflow.com/questions/33346591/what-is-the-difference-between-size-and-count-in-pandas
   (link suggests how to use groupby)

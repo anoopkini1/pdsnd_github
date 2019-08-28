@@ -18,13 +18,13 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city_raw = input("Name one city to be analyzed (chicago, new york city,washington):")
-    # CHECK if this line that follows is ok; should there be a print command also
+
     city =city_raw.lower()
     if city =='new york city':
         city ="new_york_city"
     # get user input for month (all, january, february, ... , june)
     month = input("Name the month the analyzed (enter 'all', or for individual months say for January as '1' upto June as '6'):")
-    # check only if needed
+
     if month != 'all':
         month = int(month)
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -140,7 +140,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df,city):
-    # A informal pointer for myself: interesting concept of local and global variable
+
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')

@@ -5,7 +5,7 @@ On 28-August-2019
 "Big Data" Bikeshare Project
 
 ### Description
-Provides statistics from the dataset based on user defined filters
+Provides descriptive statistics from the dataset based on user defined filters
 
 ### Files used
 chicago.csv, new_york_city.csv, washington.csv

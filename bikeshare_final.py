@@ -110,20 +110,44 @@ def station_stats(df):
     popular_end_station = df['End Station'].mode()[0]
     print("The most popular end station is:", popular_end_station)
 
+    #Also display the first 5 popular start stations
+    list_popular_start_station = df['Start Station'].value_counts()
+    print("\nList of popular start stations are:",list_popular_start_station.iloc[0:5])
+
+    countnu = input("\nDo you wish to see next 5 most popular start stations (type 'y' for yes):")
+    iter=1
+
+    while countnu =='y':
+        iter+=1
+        print("\nList of popular start stations are:",list_popular_start_station.iloc[(5*iter-5):5*iter])
+        countnu =input("\nDo you wish to see next 5 most popular start stations (type 'y' for yes):")
 
 
-    #Also display the first 5 popular start/end stations
-    list_popular_start_station = df['Start Station'].value_counts().head(5)
-    print("\nList of popular start stations are:",list_popular_start_station)
+    #Also dispay the first 5 popular end stations
+    list_popular_end_station = df['End Station'].value_counts()
+    print("\nList of popular end stations are:",list_popular_end_station.iloc[0:5])
 
-    list_popular_end_station = df['End Station'].value_counts().head(5)
-    print("\nList of popular end stations are:", list_popular_end_station)
+    countnu=input("\nDo you wish to see the next 5 most popular end stations (type 'y' for yes):")
+    iter=1
+
+    while countnu=='y':
+        iter+=1
+        print("\nList of popular end stations are:",list_popular_end_station.iloc[(5*iter-5):5*iter])
+        countnu=input("\nDo you wish to see the next 5 most popular end stations (type 'y' for yes):")
+
 
     # display most frequent combination of start station and end station trip
     df1=df[['Start Station','End Station']].copy()
-    print ("\nList of popular routes:",df1.drop_duplicates(['Start Station','End Station']))
-    # Note the statement does not work: print("\nList of popular routes:", df1.groupby(['Start Station','End Station']).count().head(5))
-    #another thing change label and add
+    print ("\nList of popular routes:",df1.drop_duplicates(['Start Station','End Station']).iloc[0:5,:])
+
+    countnu=input("\nDo you wish to see the next 5 most popular routes (type 'y' for yes):")
+    iter=1
+
+    while countnu=='y':
+        iter+=1
+        print("\nList of popular routes are:",df1.drop_duplicates(['Start Station','End Station']).iloc[(5*iter-5):5*iter,:])
+        countnu=input("\nDo you wish to see the next 5 most popular routes (type 'y' for yes):")
+
 
     # Some reference
         # https://stackoverflow.com/questions/33346591/what-is-the-difference-between-size-and-count-in-pandas

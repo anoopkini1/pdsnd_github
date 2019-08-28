@@ -181,6 +181,25 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def raw_data(df):
+    """Displays raw data on bikeshare users."""
+
+    print('\nDisplay raw data of bikeshare users 5 rows at a time...\n')
+    start_time = time.time()
+
+    list_raw_data = df
+    print("\nList of first 5 raw data (rows):",df.iloc[0:5])
+
+    countnu = input("\nDo you wish to see next 5 rows of raw data (type 'y' for yes):")
+    iter=1
+
+    while countnu =='y':
+        iter+=1
+        print("\nList of next 5 rows of raw data:",df.iloc[(5*iter-5):5*iter])
+        countnu =input("\nDo you wish to see next 5 rows of raw data (type 'y' for yes):")
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
 def main():
     while True:
@@ -191,6 +210,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
+        raw_data(df)
         # https://stackoverflow.com/questions/16043797/python-passing-variables-between-functions
         # the above link clarifies arguments within a function returne to another function very very clearly
 

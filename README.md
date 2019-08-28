@@ -11,8 +11,8 @@ Provides descriptive statistics from the dataset based on user defined filters
 chicago.csv, new_york_city.csv, washington.csv
 
 ### References
-* The reference for the datasets were from udacity "Programming for Data Science course"
-* The basic code template was taken from the same source
+* The reference for the datasets were from udacity "Programming for Data Science course" course
+* The basic code template was taken from udacity "Programming for Data Science course" course
 * https://stackoverflow.com/questions/33346591/what-is-the-difference-between-size-and-count-in-pandas
   (link suggests how to use groupby)
 * https://stackoverflow.com/questions/11285613/selecting-multiple-columns-in-a-pandas-dataframe

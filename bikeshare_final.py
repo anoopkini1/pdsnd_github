@@ -17,20 +17,13 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city_raw = input("Name one city to be analyzed (chicago, new york city, washington):")
-    while ((city_raw.lower() != 'chicago') and (city_raw.lower() != 'washington') and (city_raw.lower() != 'new york city')):
-        print("\nPlease check for correct spelling")
-        city_raw = input("\nName one city to be analyzed (chicago, new york city, washington):")
-
+    city_raw = input("Name one city to be analyzed (chicago, new york city,washington):")
     city =city_raw.lower()
 
     if city =='new york city':
         city ="new_york_city"
     # get user input for month (all, january, february, ... , june)
     month = input("Name the month the analyzed (enter 'all', or for individual months say for January as '1' upto June as '6'):")
-    while ((month != 'all') and (month != '1') and (month != '2') and (month != '3') and (month != '4') and (month != '5') and (month != '6')):
-        month = input("Name the month the analyzed (enter 'all', or for individual months say for January as '1' upto June as '6'):")
-
     if month != 'all':
         month = int(month)
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -149,12 +142,6 @@ def station_stats(df):
         countnu=input("\nDo you wish to see the next 5 most popular routes (type 'y' for yes):")
 
 
-    # Some reference
-        # https://stackoverflow.com/questions/33346591/what-is-the-difference-between-size-and-count-in-pandas
-        # the above link suggests how to use groupby
-            # https://stackoverflow.com/questions/11285613/selecting-multiple-columns-in-a-pandas-dataframe
-            # above link for reframing the dataframe with the 2 columns
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print()
     print('-'*40)
@@ -178,6 +165,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df,city):
+
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
@@ -234,8 +222,6 @@ def main():
         trip_duration_stats(df)
         user_stats(df,city)
         raw_data(df)
-        # https://stackoverflow.com/questions/16043797/python-passing-variables-between-functions
-        # the above link clarifies arguments within a function returne to another function very very clearly
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':

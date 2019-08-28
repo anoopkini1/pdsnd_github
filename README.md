@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+On 28-August-2019
 
 ### Project Title
-Replace the Project Title
+"Big Data" Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+Provides statistics from the dataset based on user defined filters
 
 ### Files used
-Include the files used
+chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+The reference for the datasets were from udacity "Programming for Data Science course"

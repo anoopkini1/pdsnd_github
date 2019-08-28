@@ -4,7 +4,7 @@ On 28-August-2019 by Anoop Kini
 ### Project Title
 "Big Data" Bikeshare Project
 
-### Description
+### Project Description
 Provides descriptive statistics from the dataset based on user defined filters. 
 
 ### Code Description
